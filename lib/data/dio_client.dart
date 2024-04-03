@@ -11,7 +11,7 @@ class DioClient {
     dio.interceptors.add(
       InterceptorsWrapper(
         onRequest: (RequestOptions options, RequestInterceptorHandler handler) async {
-          options.queryParameters.addAll({'apikey': 'NgAnztHF8RTPmhWeRpCElGRHEKVPXCqQ'});
+          options.queryParameters.addAll({'apikey': ''});
           return handler.next(options); // continue
         },
       ),
