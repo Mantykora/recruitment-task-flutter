@@ -13,4 +13,3 @@ class SearchRepository {
     return companies.first;
   }
 }
-

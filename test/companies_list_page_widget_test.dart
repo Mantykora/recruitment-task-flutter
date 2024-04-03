@@ -36,5 +36,7 @@ void main() {
 
     // Verify that CompaniesListPageBody is shown
     expect(find.byType(CompaniesListPageBody), findsOneWidget);
+
+
   });
 }

@@ -16,15 +16,13 @@ class CompaniesListPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Companies'),
       ),
-      body: CompaniesListPageBody(),
+      body: const CompaniesListPageBody(),
     );
   }
 }
 
 class CompaniesListPageBody extends StatelessWidget {
-  CompaniesListPageBody({super.key});
-
-  bool isSearchEmpty = true;
+  const CompaniesListPageBody({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +39,6 @@ class CompaniesListPageBody extends StatelessWidget {
                   prefixIcon: Icon(Icons.search),
                 ),
                 onSubmitted: (value) {
-                  isSearchEmpty = value.isEmpty;
                   BlocProvider.of<SearchCubit>(context).search(value);
                 },
               ),

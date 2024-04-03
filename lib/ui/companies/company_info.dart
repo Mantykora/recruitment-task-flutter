@@ -1,6 +1,5 @@
 import 'package:company_insight_app/bloc/favorites/favorites_cubit.dart';
 import 'package:company_insight_app/data/models/company.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -23,11 +22,11 @@ class CompanyInfo extends StatelessWidget {
                 children: [
                   ListTile(
                     title: const Text('Company Name'),
-                    subtitle: Text('${company.companyName}'),
+                    subtitle: Text(company.companyName),
                   ),
                   ListTile(
                     title: const Text('Company Symbol'),
-                    subtitle: Text('${company.symbol}'),
+                    subtitle: Text(company.symbol),
                   ),
                   ListTile(
                     title: const Text('Company Price'),
@@ -51,7 +50,7 @@ class CompanyInfo extends StatelessWidget {
                   ),
                   ListTile(
                     title: const Text('Company Range'),
-                    subtitle: Text('${company.range}'),
+                    subtitle: Text(company.range),
                   ),
                   ListTile(
                     title: const Text('Company Changes'),
@@ -59,76 +58,76 @@ class CompanyInfo extends StatelessWidget {
                   ),
                   ListTile(
                     title: const Text('Company Currency'),
-                    subtitle: Text('${company.currency}'),
+                    subtitle: Text(company.currency),
                   ),
                   ListTile(
                     title: const Text('Company CIK'),
-                    subtitle: Text('${company.cik}'),
+                    subtitle: Text(company.cik),
                   ),
                   if (!isPreview) ...[
                     ListTile(
                       title: const Text('Company ISIN'),
-                      subtitle: Text('${company.isin}'),
+                      subtitle: Text(company.isin),
                     ),
                     ListTile(
                       title: const Text('Company CUSIP'),
-                      subtitle: Text('${company.cusip}'),
+                      subtitle: Text(company.cusip),
                     ),
                     ListTile(
                       title: const Text('Company Exchange'),
-                      subtitle: Text('${company.exchange}'),
+                      subtitle: Text(company.exchange),
                     ),
                     ListTile(
                       title: const Text('Company Exchange Short Name'),
-                      subtitle: Text('${company.exchangeShortName}'),
+                      subtitle: Text(company.exchangeShortName),
                     ),
                     ListTile(
                       title: const Text('Company Industry'),
-                      subtitle: Text('${company.industry}'),
+                      subtitle: Text(company.industry),
                     ),
                     ListTile(
                       title: const Text('Company Website'),
-                      subtitle: Text('${company.website}'),
+                      subtitle: Text(company.website),
                     ),
                     ListTile(
                       title: const Text('Company Description'),
-                      subtitle: Text('${company.description}'),
+                      subtitle: Text(company.description),
                     ),
                     ListTile(
                       title: const Text('Company CEO'),
-                      subtitle: Text('${company.ceo}'),
+                      subtitle: Text(company.ceo),
                     ),
                     ListTile(
                       title: const Text('Company Sector'),
-                      subtitle: Text('${company.sector}'),
+                      subtitle: Text(company.sector),
                     ),
                     ListTile(
                       title: const Text('Company Country'),
-                      subtitle: Text('${company.country}'),
+                      subtitle: Text(company.country),
                     ),
                     ListTile(
                       title: const Text('Company Full Time Employees'),
-                      subtitle: Text('${company.fullTimeEmployees}'),
+                      subtitle: Text(company.fullTimeEmployees),
                     ),
                     ListTile(
                       title: const Text('Company Phone'),
-                      subtitle: Text('${company.phone}'),
+                      subtitle: Text(company.phone),
                     ),
                     ListTile(
                       title: const Text('Company Address'),
-                      subtitle: Text('${company.address}'),
+                      subtitle: Text(company.address),
                     ),
                     ListTile(
                       title: const Text('Company City'),
-                      subtitle: Text('${company.city}'),
+                      subtitle: Text(company.city),
                     ),
                     ListTile(
                       title: const Text('Company State'),
-                      subtitle: Text('${company.state}'),
+                      subtitle: Text(company.state),
                     ),
                     ListTile(
                       title: const Text('Company ZIP'),
-                      subtitle: Text('${company.zip}'),
+                      subtitle: Text(company.zip),
                     ),
                     ListTile(
                       title: const Text('Company DCF Diff'),
@@ -140,7 +139,7 @@ class CompanyInfo extends StatelessWidget {
                     ),
                     ListTile(
                       title: const Text('Company Image'),
-                      subtitle: Image.network('${company.image}'),
+                      subtitle: Image.network(company.image),
                     ),
                     ListTile(
                       title: const Text('Company IPO Date'),
@@ -181,9 +180,9 @@ class CompanyInfo extends StatelessWidget {
                 stream: BlocProvider.of<FavoritesCubit>(context).isFavorite(company),
                 builder: (context, snapshot) {
                   if (snapshot.hasData && snapshot.data == true) {
-                    return Icon(Icons.favorite, color: Colors.red);
+                    return const Icon(Icons.favorite, color: Colors.red);
                   } else {
-                    return Icon(Icons.favorite_border_outlined, color: Colors.red);
+                    return const Icon(Icons.favorite_border_outlined, color: Colors.red);
                   }
                 },
               ),

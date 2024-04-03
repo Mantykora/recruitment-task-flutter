@@ -4,11 +4,12 @@ import 'package:company_insight_app/data/repositories/search_repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 part 'search_state.dart';
+
 part 'search_cubit.freezed.dart';
 
 class SearchCubit extends Cubit<SearchState> {
-  SearchCubit(SearchRepository searchRepository) :
-    _searchRepository = searchRepository,
+  SearchCubit(SearchRepository searchRepository)
+      : _searchRepository = searchRepository,
         super(const SearchState.initial());
 
   final SearchRepository _searchRepository;
@@ -24,4 +25,3 @@ class SearchCubit extends Cubit<SearchState> {
     }
   }
 }
-

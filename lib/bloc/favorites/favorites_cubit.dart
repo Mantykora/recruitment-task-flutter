@@ -4,9 +4,8 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 part 'favorites_state.dart';
+
 part 'favorites_cubit.freezed.dart';
-
-
 
 class FavoritesCubit extends Cubit<FavoritesState> {
   final FavoritesRepository _favoritesRepository;
@@ -38,8 +37,8 @@ class FavoritesCubit extends Cubit<FavoritesState> {
   }
 
   Stream<bool> isFavorite(Company company) async* {
-    while (true) {
-      await Future.delayed(Duration(seconds: 1)); // delay to prevent high CPU usage
+    yield _favoritesRepository.readFavorites().contains(company);
+    await for (var event in _favoritesRepository.watchFavorites()) {
       yield _favoritesRepository.readFavorites().contains(company);
     }
   }

@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 class CompaniesList extends StatelessWidget {
   final List<Company> companiesList;
 
-  CompaniesList({required this.companiesList});
+  const CompaniesList({super.key, required this.companiesList});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class CompaniesList extends StatelessWidget {
               ),
               title: Text(companiesList[index].companyName),
               subtitle: Text('\$${companiesList[index].price.toStringAsFixed(2)}'),
-              trailing: Icon(Icons.more_vert),
+              trailing: const Icon(Icons.more_vert),
               onTap: () {
                 Navigator.push(
                   context,

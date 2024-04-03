@@ -26,9 +26,7 @@ class SearchApi {
         }
       }
 
-      throw e;
+      rethrow;
     }
   }
-
-  searchCompanies(String query) {}
 }

@@ -17,4 +17,8 @@ class FavoritesRepository {
   List<Company> readFavorites() {
     return _favoritesBox.values.toList();
   }
+
+  Stream<BoxEvent> watchFavorites() {
+    return _favoritesBox.watch();
+  }
 }

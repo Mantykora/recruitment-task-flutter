@@ -2,7 +2,6 @@ import 'package:company_insight_app/app.dart';
 import 'package:company_insight_app/data/models/company.dart';
 import 'package:company_insight_app/injection.dart';
 import 'package:flutter/material.dart';
-import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
 void main() async{

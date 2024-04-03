@@ -1,6 +1,5 @@
 import 'package:company_insight_app/data/models/company.dart';
 import 'package:company_insight_app/ui/companies/company_info.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CompaniesDetailPage extends StatelessWidget {
